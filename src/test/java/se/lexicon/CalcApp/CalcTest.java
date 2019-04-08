@@ -19,7 +19,7 @@ public class CalcTest {
 	}
 	@Test
 	public void calc_multiplication() {
-		double num1=2,num2=0,expected=0;
+		double num1=2.2,num2=0.3,expected=0.66;
 
 		//"*"
 		char operation='*';
@@ -43,14 +43,26 @@ public class CalcTest {
 	
 	@Test
 	public void coun_Division() {
-		double num1=2,num2=8,expected=4;
+		double num1=2,num2=8,expected=0.25;
 		
 		//"/"
 		char operation='/';
 		
 		double actual=App.calc(num1, num2, operation);
 				
-		Assert.assertEquals(expected, actual, 4);
+		Assert.assertEquals(expected, actual, 0.1);
+	}
+	
+	@Test
+	public void coun_Division0() {
+		double num1=2,num2=0,expected=0;
+		
+		//"/"
+		char operation='/';
+		
+		double actual=App.calc(num1, num2, operation);
+				
+		Assert.assertEquals(expected, actual, 0.1);
 	}
 
 }

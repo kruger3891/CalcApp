@@ -22,7 +22,7 @@ public class App {
 		}
 	}
 	public static Double getDouble(){
-        System.out.println("Insert the number:");
+        System.out.println("\nInsert the number:");
         double num;
         if(sc.hasNextDouble()){
             num = sc.nextDouble();
@@ -58,13 +58,13 @@ public class App {
                 result = num1*num2;
                 break;
             case '/':
-            	if(num1 == 0) {
+            	if(num2 == 0) {
             		System.out.println("Cannot division with 0.\n");
+            		result=0.0;
             	}else {
             		result = num1/num2;
-            		break;
             	}
-                
+            	break;
                 
             default:
                 System.out.println("The operation is not recognized. Repeat input.");
